@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
-    "test": "mocha ./src/test"
+    "test": "mocha ./src/test",
+    "deploy": "node --env-file .env src/deploy.js"
   },
   "author": "gerjunior",
   "license": "ISC",
   "dependencies": {
+    "@truffle/hdwallet-provider": "^2.1.15",
     "ganache": "^7.9.1",
     "mocha": "^10.2.0",
     "solc": "^0.8.22",
